@@ -1,9 +1,10 @@
-package nabi.la.testing_android
+package nabi.la.testing_android.data.db
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import nabi.la.testing_android.data.db.entities.ShoppingItem
 
 @Database(
    entities = [ShoppingItem::class],

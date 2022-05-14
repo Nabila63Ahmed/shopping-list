@@ -43,7 +43,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     def room_version = "2.4.2"
-    def lifecycle_version = "2.0.0"
+    def lifecycle_version = '2.4.0'
 
     // Room and Architectural Components
     implementation "androidx.room:room-runtime:$room_version"

@@ -1,4 +1,4 @@
-package nabi.la.testing_android
+package nabi.la.testing_android.data.db.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

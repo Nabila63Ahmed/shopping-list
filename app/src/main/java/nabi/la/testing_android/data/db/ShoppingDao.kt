@@ -1,4 +1,4 @@
-package nabi.la.testing_android
+package nabi.la.testing_android.data.db
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
@@ -6,7 +6,7 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import kotlinx.coroutines.selects.select
+import nabi.la.testing_android.data.db.entities.ShoppingItem
 
 @Dao
 interface ShoppingDao {
