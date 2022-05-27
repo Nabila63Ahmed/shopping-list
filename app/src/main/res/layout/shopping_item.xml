@@ -5,14 +5,14 @@
                                                     android:padding="16dp">
 
     <TextView
-            android:id="@+id/tvName"
+            android:id="@+id/tvAmount"
             android:text="TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"/>
     <TextView
-            android:id="@+id/tvAmount"
+            android:id="@+id/tvName"
             android:text="TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
