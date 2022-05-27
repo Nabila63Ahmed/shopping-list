@@ -3,7 +3,6 @@ package nabi.la.testing_android.ui.shoppinglist
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
-import nabi.la.testing_android.R
 import nabi.la.testing_android.data.db.ShoppingDatabase
 import nabi.la.testing_android.data.repositories.ShoppingRepository
 import nabi.la.testing_android.databinding.ActivityShoppingBinding
