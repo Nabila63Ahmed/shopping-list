@@ -3,9 +3,12 @@ package nabi.la.testing_android.ui.shoppinglist
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.recyclerview.widget.LinearLayoutManager
 import nabi.la.testing_android.data.db.ShoppingDatabase
+import nabi.la.testing_android.data.db.entities.ShoppingItem
 import nabi.la.testing_android.data.repositories.ShoppingRepository
 import nabi.la.testing_android.databinding.ActivityShoppingBinding
+import nabi.la.testing_android.other.ShoppingItemAdapter
 
 class ShoppingActivity : AppCompatActivity() {
     private lateinit var binding: ActivityShoppingBinding
@@ -20,5 +23,23 @@ class ShoppingActivity : AppCompatActivity() {
         val factory = ShoppingViewModelFactory(repository)
 
         val model: ShoppingViewModel by viewModels { factory }
+
+        val adapter = ShoppingItemAdapter(listOf(), model)
+
+        binding.rvShoppingItems.layoutManager = LinearLayoutManager(this)
+        binding.rvShoppingItems.adapter = adapter
+
+        model.getAllShoppingItems().observe(this) {
+            adapter.items = it
+            adapter.notifyDataSetChanged()
+        }
+
+        binding.fab.setOnClickListener {
+            AddShoppingItemDialog(this, object : AddDialogListener {
+                override fun onAddButtonClicked(item: ShoppingItem) {
+                    model.insert(item)
+                }
+            }).show()
+        }
     }
 }

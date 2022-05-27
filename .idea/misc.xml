@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1015625" />
         <entry key="app/src/main/res/layout/activity_shopping.xml" value="0.23541666666666666" />
+        <entry key="app/src/main/res/layout/dialog_add_shopping_item.xml" value="0.19067028985507245" />
         <entry key="app/src/main/res/layout/shopping_item.xml" value="0.234375" />
       </map>
     </option>
