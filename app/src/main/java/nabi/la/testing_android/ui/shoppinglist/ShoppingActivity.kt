@@ -13,7 +13,7 @@ import org.kodein.di.instance
 
 class ShoppingActivity : AppCompatActivity(), DIAware {
 
-    override val di by closestDI(this)
+    override val di by closestDI()
     private val factory : ShoppingViewModelFactory by instance()
 
     private lateinit var binding: ActivityShoppingBinding
